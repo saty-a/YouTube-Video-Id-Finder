@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
     <style>
-        body{            
+        body{
             box-sizing: border-box;
             background: rgb(235, 232, 232);
         }
@@ -30,12 +30,15 @@
 <title>Online tool</title>
 <body>
 <div>
+
     <h3>Enter the YouTube Video address Here</h3>
     <span id="thumbnail"></span>
     <br><br>
     Address : <input type="text" id="yturl" size="50" placeholder="Paste the YouTube Video URL Here"><br><br>
-    <button onclick="YouTubeGetID()">Find</button><br><br>
+    <button onclick="YouTubeGetID()">Find</button>
+    <button type="reset" onclick="ResetAll()">Reset</button><br><br>
     Video id :&nbsp&nbsp<label id="videoid"> </label>
+
 </div>
 <script>
     function YouTubeGetID(){
@@ -52,5 +55,14 @@
         document.getElementById("videoid").innerHTML=ID;
     }
     </script>
+<script>
+function ResetAll(){
+  document.getElementById("videoid").innerHTML='';
+  document.getElementById("thumbnail").innerHTML='';
+  document.getElementById("yturl").value='';
+}
+</script>
+
+</script>
 </body>
 </html>
